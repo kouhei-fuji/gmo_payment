@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost/err_code
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - '*/*; charset=utf-8'
+      Etag:
+      - '"d4dacf994f63ad8e51bb4b056f043b11"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4ff89d7b-dd20-4977-8d84-c2e9b8071fdc
+      X-Runtime:
+      - '0.006017'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      Date:
+      - Thu, 19 Mar 2015 15:07:58 GMT
+      Content-Length:
+      - '43'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - request_method=GET; path=/
+    body:
+      encoding: UTF-8
+      string: ErrCode=E01|E01&ErrInfo=E01010001|E01010010
+    http_version: 
+  recorded_at: Thu, 19 Mar 2015 15:07:58 GMT
+recorded_with: VCR 2.9.3
