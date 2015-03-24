@@ -14,7 +14,7 @@ module GmoPayment
             value = case key
               when :job_cd
                 v.to_s.upcase
-              when :amount, :tax, :td_flag, :method, :pay_times, :seq_mode, :default_flag, :card_seq
+              when :amount, :card_seq, :default_flag, :method, :pay_times, :seq_mode, :tax, :td_flag, :timeout
                 v.to_i.to_s
               else
                 v.to_s
@@ -162,7 +162,7 @@ module GmoPayment
         when :entry_tran_btc
           [:shop_id, :shop_pass, :order_id, :amount]
         when :exec_tran_btc
-          [:shop_id, :access_id, :access_pass, :order_id, :ret_url, :item_name, :item_memo]
+          [:shop_id, :access_id, :access_pass, :order_id, :ret_url, :item_name, :item_memo, :timeout]
         when :search_trade_btc
           [:shop_id, :shop_pass, :order_id, :pay_type]
         else
@@ -277,6 +277,8 @@ module GmoPayment
           value.length <= 20
         when :td_tenant_name
           encode_euc_base64(value).bytesize <= 25
+        when :timeout
+          value.to_i <= 86400
         else
           true
         end

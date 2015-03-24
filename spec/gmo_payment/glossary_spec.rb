@@ -9,7 +9,7 @@ describe 'GmoPayment::GLOSSARY' do
     expect(subject.values).to all be_a(String)
   end
 
-  it 'is 58 pairs' do
-    expect(subject.length).to eq(58)
+  it 'is 59 pairs' do
+    expect(subject.length).to eq(59)
   end
 end

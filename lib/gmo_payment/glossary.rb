@@ -57,6 +57,7 @@ module GmoPayment
     :td_flag           => 'TdFlag',
     :td_tenant_name    => 'TdTenantName',
     :term_url          => 'TermUrl',
+    :timeout           => 'Timeout',
     :token             => 'Token',
     :tran_id           => 'TranID',
     :tran_date         => 'TranDate',

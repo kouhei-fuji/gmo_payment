@@ -729,15 +729,72 @@ describe GmoPayment::Client, :vcr do
   end
 
   describe '#entry_tran_btc' do
-    it 'return 2 items'
+    let(:call_method) { '#entry_tran_btc' }
+    let(:order_id) { 'T-13' }
+    it 'return 2 items' do
+      args = {
+        :order_id => order_id,
+        :amount   => 1
+      }
+      response = client.entry_tran_btc(args)
+      expect(response.access_id).not_to be(nil)
+      expect(response.access_pass).not_to be(nil)
+    end
   end
 
   describe '#exec_tran_btc' do
-    it 'return 3 items'
+    let(:call_method) { '#exec_tran_btc' }
+    let(:order_id) { 'T-14' }
+    it 'return 3 items' do
+      args1 = {
+        :order_id => order_id,
+        :amount   => 1
+      }
+      res = client.entry_tran_btc(args1)
+      args2 = {
+        :access_id      => res.access_id,
+        :access_pass    => res.access_pass,
+        :order_id       => order_id,
+        :ret_url        => 'https://localhost/recieve?query1=Test01&query2=DEV環境のテストです。',
+        :item_name      => 'DEVテストの商品',
+        :item_memo      => 'これはDevelopment環境のテスト用の商品です。',
+        :timeout        => 60,
+        :client_field_1 => field_1,
+        :client_field_2 => field_2,
+        :client_field_3 => call_method
+      }
+      response = client.exec_tran_btc(args2)
+      expect(response.access_id).to eq(res.access_id)
+      expect(response.token).not_to be(nil)
+      expect(response.start_url).not_to be(nil)
+    end
   end
 
   describe '#search_trade_btc' do
-    it 'return 11 items'
+    let(:call_method) { '#search_trade_btc' }
+    let(:order_id) { 'T-15' }
+    it 'return 11 items' do
+      args1 = {
+        :order_id => order_id,
+        :amount   => 1
+      }
+      res = client.entry_tran_btc(args1)
+      args2 = {
+        :order_id => order_id
+      }
+      response = client.search_trade_btc(args2)
+      expect(response.status).to eq('UNPROCESSED')
+      expect(response.process_date).not_to be(nil)
+      expect(response.access_id).to eq(res.access_id)
+      expect(response.access_pass).to eq(res.access_pass)
+      expect(response.amount).to eq('1')
+      expect(response.tax).to eq('0')
+      expect(response.currency).to be(nil)
+      expect(response.client_field_1).to be(nil)
+      expect(response.client_field_2).to be(nil)
+      expect(response.client_field_3).to be(nil)
+      expect(response.pay_type).not_to be(nil)
+    end
   end
 
 end

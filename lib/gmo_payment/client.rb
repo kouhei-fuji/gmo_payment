@@ -436,16 +436,17 @@ module GmoPayment
     # 契約情報を確認し、これ以降の処理に必要なトークンを返却します。
     #
     # @param [Hash] args
-    # @option args [String] :shop_id     required
-    # @option args [String] :access_id   required
-    # @option args [String] :access_pass required
-    # @option args [String] :order_id    required
-    # @option args [String] :ret_url     required
-    # @option args [String] :item_name   required
-    # @option args [String] :item_memo   required
-    # @option args [String] :client_field_1
-    # @option args [String] :client_field_2
-    # @option args [String] :client_field_3
+    # @option args [String]  :shop_id     required
+    # @option args [String]  :access_id   required
+    # @option args [String]  :access_pass required
+    # @option args [String]  :order_id    required
+    # @option args [String]  :ret_url     required
+    # @option args [String]  :item_name   required
+    # @option args [String]  :item_memo   required
+    # @option args [Integer] :timeout     required
+    # @option args [String]  :client_field_1
+    # @option args [String]  :client_field_2
+    # @option args [String]  :client_field_3
     # @return [Response]
     def exec_tran_btc(args = {})
       call(__method__, args)

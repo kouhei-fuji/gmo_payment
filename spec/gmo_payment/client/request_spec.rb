@@ -345,6 +345,19 @@ describe GmoPayment::Client::Request do
         items, '日', 9
     end
 
+    describe ':timeout' do
+      items = [:timeout]
+      let(:key) { items.first }
+      context 'with under 24 hours' do
+        let(:value) { "#{24 * 60 * 60}" }
+        it { is_expected.to be(true) }
+      end
+      context 'with over 24 hours' do
+        let(:value) { "#{24 * 60 * 60 + 1}" }
+        it { is_expected.to be(false) }
+      end
+    end
+
     describe 'the other cases' do
       let(:key) { :acs }
       let(:value) { 'x' }
