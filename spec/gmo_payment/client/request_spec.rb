@@ -2,6 +2,7 @@
 require 'spec_helper'
 
 describe GmoPayment::Client::Request do
+  before { GmoPayment.reset! }
   subject { GmoPayment::Client::Request.new(:entry_tran, args) }
 
   describe '#missing_items' do
