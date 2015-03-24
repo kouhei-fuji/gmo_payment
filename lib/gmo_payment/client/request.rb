@@ -45,7 +45,7 @@ module GmoPayment
               required_items
             end
           when :exec_tran, :exec_tran_3d, :exec_tran_member, :exec_tran_member_3d, :re_exec_tran
-            if @input[:method] && ['2', '4'].inlcude?(@input[:method])
+            if @input[:method] && ['2', '4'].include?(@input[:method])
               required_items << :pay_times
             else
               required_items
@@ -250,6 +250,8 @@ module GmoPayment
             ['CAPTURE', 'AUTH'].include?(value)
           when :change_tran
             ['CAPTURE', 'AUTH', 'SAUTH'].include?(value)
+          else
+            true
           end
         when :member_id
           (value =~ /[^\w\-\.@]/).nil? && value.length <= 60

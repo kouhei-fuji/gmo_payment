@@ -224,6 +224,11 @@ describe GmoPayment::Client::Request do
         it_behaves_like 'validation of value including',
           items, ['CAPTURE', 'AUTH', 'SAUTH']
       end
+      context 'with Client#auth_to_sales or the other case' do
+        let(:key) { items.first }
+        let(:value) { 'SALES' }
+        it { is_expected.to be(true) }
+      end
     end
 
     describe ':member_id' do
