@@ -25,8 +25,38 @@ describe GmoPayment::Client::Request do
   end
 
   describe '#invalid_items' do
+    subject { GmoPayment::Client::Request.new(method, args).invalid_items }
+    let(:method) { :entry_tran }
     let(:args) { {} }
-    it { expect(subject.invalid_items).to be_a(Hash) }
+    it { is_expected.to be_a(Hash) }
+    [:entry_tran, :re_exec_tran, :change_tran].each do |called_method|
+      context "with called_method is #{called_method}" do
+        let(:method) { called_method }
+        context 'with amount + tax <= 9,999,999' do
+          let(:args) { { amount: 9_999_998, tax: 1 } }
+          it { is_expected.not_to including(:amount) }
+          it { is_expected.not_to including(:tax) }
+        end
+        context 'with amount + tax > 9,999,999' do
+          let(:args) { { amount: 9_999_999, tax: 1 } }
+          it { is_expected.to including(:amount) }
+          it { is_expected.to including(:tax) }
+        end
+      end
+    end
+    context 'with called_method is #entry_tran_btc' do
+      let(:method) { :entry_tran_btc }
+      context 'with amount + tax <= 300,000' do
+        let(:args) { { amount: 299_999, tax: 1 } }
+        it { is_expected.not_to including(:amount) }
+        it { is_expected.not_to including(:tax) }
+      end
+      context 'with amount + tax > 300,000' do
+        let(:args) { { amount: 300_000, tax: 1 } }
+        it { is_expected.to including(:amount) }
+        it { is_expected.to including(:tax) }
+      end
+    end
   end
 
   describe '#invalid?' do
