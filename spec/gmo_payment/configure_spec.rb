@@ -32,8 +32,8 @@ describe GmoPayment::Configure do
     describe '.verify_mode' do
       it { expect(configure.verify_mode).to be(nil) }
     end
-    describe '.error_message' do
-      it { expect(configure.error_message).to be(nil) }
+    describe '.error_list' do
+      it { expect(configure.error_list).to be(nil) }
     end
     describe '.site_id' do
       it { expect(configure.site_id).to be(nil) }
@@ -52,14 +52,14 @@ describe GmoPayment::Configure do
   context 'after .setup' do
     before do
       configure.setup do |c|
-        c.api_endpoint  = 'example.com'
-        c.proxy         = 'https://user:password@proxy.com:443/'
-        c.verify_mode   = 1
-        c.error_message = 'path/to/file.yml'
-        c.site_id       = 'GMO_SITE_ID'
-        c.site_pass     = 'GMO_SITE_PASS'
-        c.shop_id       = 'GMO_SHOP_ID'
-        c.shop_pass     = 'GMO_SHOP_PASS'
+        c.api_endpoint = 'example.com'
+        c.proxy        = 'https://user:password@proxy.com:443/'
+        c.verify_mode  = 1
+        c.error_list   = 'path/to/file.yml'
+        c.site_id      = 'GMO_SITE_ID'
+        c.site_pass    = 'GMO_SITE_PASS'
+        c.shop_id      = 'GMO_SHOP_ID'
+        c.shop_pass    = 'GMO_SHOP_PASS'
       end
     end
     describe '.api_endpoint' do
@@ -71,8 +71,8 @@ describe GmoPayment::Configure do
     describe '.verify_mode' do
       it { expect(configure.verify_mode).to eq(1) }
     end
-    describe '.error_message' do
-      it { expect(configure.error_message).to eq('path/to/file.yml') }
+    describe '.error_list' do
+      it { expect(configure.error_list).to eq('path/to/file.yml') }
     end
     describe '.site_id' do
       it { expect(configure.site_id).to eq('GMO_SITE_ID') }

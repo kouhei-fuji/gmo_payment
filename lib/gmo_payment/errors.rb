@@ -79,6 +79,17 @@ module GmoPayment
         self.response = response
         super("HTTP response called from `#{called_method}' has ErrCode")
       end
+
+      # @param [String] file
+      # @return [Hash]
+      def error_messages(file = nil)
+        require 'yaml'
+        error_list = YAML.load_file(file || GmoPayment::Configure.error_list)
+        self.response.err_info.each_with_object({}) do |error, hash|
+          hash[error] = error_list[error]
+        end
+      end
     end
+
   end
 end

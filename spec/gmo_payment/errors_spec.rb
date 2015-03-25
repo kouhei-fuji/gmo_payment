@@ -75,6 +75,7 @@ describe GmoPayment::Errors do
     it { is_expected.to be_a(basic_error) }
     it { is_expected.to respond_to(:called_method) }
     it { is_expected.to respond_to(:response) }
+    it { is_expected.to respond_to(:error_messages) }
     it '#called_method return first argument as it is' do
       expect(subject.called_method).to eq('a')
     end
@@ -85,5 +86,33 @@ describe GmoPayment::Errors do
       expect(subject.message).to match('called from `a\'')
       expect(subject.message).to match('ErrCode')
     end
+
+    describe '#error_messages' do
+      subject do
+        class Example; def err_info; ['E01010001']; end; end
+        GmoPayment::Errors::ResponseHasErrCodeError.new('a', Example.new).error_messages(args)
+      end
+      context 'with Hash format file that is given argument' do
+        let(:args) { File.expand_path('../../../lib/generators/gmo_payment/templates/ja.yml', __FILE__) }
+        it { is_expected.to be_a(Hash) }
+        it { is_expected.to including({ 'E01010001' => 'ショップIDが指定されていません。' }) }
+      end
+      context 'with Hash format file that is given Configure' do
+        let(:args) { nil }
+        before do
+          GmoPayment.setup do |c|
+            c.error_list = File.expand_path('../../../lib/generators/gmo_payment/templates/ja.yml', __FILE__)
+          end
+        end
+        after { GmoPayment.reset! }
+        it { is_expected.to be_a(Hash) }
+        it { is_expected.to including({ 'E01010001' => 'ショップIDが指定されていません。' }) }
+      end
+      context 'without file' do
+        let(:args) { nil }
+        it { expect { subject.error_messages }.to raise_error }
+      end
+    end
+
   end
 end
