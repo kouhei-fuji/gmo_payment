@@ -757,8 +757,8 @@ describe GmoPayment::Client, :vcr do
         :order_id       => order_id,
         :ret_url        => 'https://localhost/recieve?query1=Test01&query2=DEV環境のテストです。',
         :item_name      => 'DEVテストの商品',
-        :item_memo      => 'これはDevelopment環境のテスト用の商品です。',
         :timeout        => 60,
+        :item_memo      => 'これはDevelopment環境のテスト用の商品です。',
         :client_field_1 => field_1,
         :client_field_2 => field_2,
         :client_field_3 => call_method
@@ -768,6 +768,15 @@ describe GmoPayment::Client, :vcr do
       expect(response.token).not_to be(nil)
       expect(response.start_url).not_to be(nil)
     end
+  end
+
+  describe '#get_rate_btc' do
+    let(:call_method) { '#get_rate_btc' }
+    it 'return 1 item'# do
+    #   args = {}
+    #   response = client.get_rate_btc(args)
+    #   expect(response.medium).not_to be(nil)
+    # end
   end
 
   describe '#search_trade_btc' do

@@ -423,7 +423,7 @@ module GmoPayment
     #
     # @param [Hash] args
     # @option args [String]  :shop_id   required
-    # @option args [String]  :site_pass required
+    # @option args [String]  :shop_pass required
     # @option args [String]  :order_id  required
     # @option args [Integer] :amount    required
     # @option args [Integer] :tax
@@ -442,8 +442,8 @@ module GmoPayment
     # @option args [String]  :order_id    required
     # @option args [String]  :ret_url     required
     # @option args [String]  :item_name   required
-    # @option args [String]  :item_memo   required
     # @option args [Integer] :timeout     required
+    # @option args [String]  :item_memo   required
     # @option args [String]  :client_field_1
     # @option args [String]  :client_field_2
     # @option args [String]  :client_field_3
@@ -452,7 +452,22 @@ module GmoPayment
       call(__method__, args)
     end
 
-    # [20.1.2.1 取引状態参照 (BTC)]
+    # [18.1.2.5 決済実行 (BTC)]
+    # ビットコインのレート(参考値)を返却します。
+    #
+    # @note
+    #   注意: このレートは、決済後の円換算レートを保証するものではございません。
+    #   エンドユーザーに表示する場合等、参考値としてご利用下さい。
+    #   また、レートはリクエストビットコインウォレット事業者から取得した値を返却しております。
+    #
+    # @param [Hash] args
+    # @option args [String] :shop_id   required
+    # @option args [String] :shop_pass required
+    def get_rate_btc(args = {})
+      call(__method__, args)
+    end
+
+    # [21.1.2.1 取引状態参照 (BTC)]
     # 指定したオーダーIDの取引情報を取得します。
     #
     # @param [Hash] args
@@ -503,6 +518,8 @@ module GmoPayment
         '/payment/EntryTranBTC.idPass'
       when :exec_tran_btc
         '/payment/ExecTranBTC.idPass'
+      when :get_rate_btc
+        '/payment/GetBTCRate.idPass'
       when :search_trade_btc
         '/payment/SearchTradeMulti.idPass'
       end

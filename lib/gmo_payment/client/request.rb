@@ -162,7 +162,9 @@ module GmoPayment
         when :entry_tran_btc
           [:shop_id, :shop_pass, :order_id, :amount]
         when :exec_tran_btc
-          [:shop_id, :access_id, :access_pass, :order_id, :ret_url, :item_name, :item_memo, :timeout]
+          [:shop_id, :access_id, :access_pass, :order_id, :ret_url, :item_name, :timeout, :item_memo]
+        when :get_rate_btc
+          [:shop_id, :shop_pass]
         when :search_trade_btc
           [:shop_id, :shop_pass, :order_id, :pay_type]
         else

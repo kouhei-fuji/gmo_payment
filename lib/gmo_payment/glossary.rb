@@ -33,6 +33,7 @@ module GmoPayment
     :item_name         => 'ItemName',
     :job_cd            => 'JobCd',
     :md                => 'MD',
+    :medium            => 'Medium',
     :member_id         => 'MemberID',
     :member_name       => 'MemberName',
     :method            => 'Method',

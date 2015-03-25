@@ -4,7 +4,7 @@ Ruby client for the protocol type API provided by GMO Payment Gateway.
 This library includes:
 
 - Credit-Card protocol API (Version: 2014/03/18 1.13)
-- Multi-Payment protocol API (Bitcoin) (Version: 2014/11/21 1.30)
+- Multi-Payment protocol API (Bitcoin) (Version: 2015/04/01 1.32)
 - ErrorCode (Version: 2015/02/26 1.43)
 
 ## Installation
