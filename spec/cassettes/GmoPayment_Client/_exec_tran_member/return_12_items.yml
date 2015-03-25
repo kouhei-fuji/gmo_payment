@@ -1,0 +1,157 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/SaveMember.idPass
+    body:
+      encoding: US-ASCII
+      string: MemberID=T-M9&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '52'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:10 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: MemberID=T-M9
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:11 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/SaveCard.idPass
+    body:
+      encoding: US-ASCII
+      string: MemberID=T-M9&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '88'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:11 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: CardSeq=0&CardNo=<CARD_NO_N_MASK>&Forward=2a99662
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:12 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
+    body:
+      encoding: US-ASCII
+      string: OrderID=T-5&JobCd=AUTH&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:11 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: AccessID=d7d565575fc81c4c26bd3d9b9b9a3812&AccessPass=19c39c4b1533113951230387758ea7b9
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:12 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
+    body:
+      encoding: US-ASCII
+      string: AccessID=d7d565575fc81c4c26bd3d9b9b9a3812&AccessPass=19c39c4b1533113951230387758ea7b9&OrderID=T-5&MemberID=T-M9&CardSeq=0&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran_member&ClientFieldFlag=1&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '277'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:12 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        QUNTPTAmT3JkZXJJRD1ULTUmRm9yd2FyZD0yYTk5NjYyJk1ldGhvZD0xJlBh
+        eVRpbWVzPSZBcHByb3ZlPTY2MTEyNjQmVHJhbklEPTE1MDMyNDIxMDAxMTEx
+        MTExMTExMTE4NzIzNzYmVHJhbkRhdGU9MjAxNTAzMjQyMTAwMTImQ2hlY2tT
+        dHJpbmc9ODJhNTc1Y2YwOTg4OTY4NmQ3ZjhkZmRmOTc2OWI5MjYmQ2xpZW50
+        RmllbGQxPURFVlRFU1QmQ2xpZW50RmllbGQyPYpKlK2DZYNYg2cmQ2xpZW50
+        RmllbGQzPSNleGVjX3RyYW5fbWVtYmVy
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:13 GMT
+recorded_with: VCR 2.9.3

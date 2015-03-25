@@ -1,0 +1,151 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/SaveMember.idPass
+    body:
+      encoding: US-ASCII
+      string: MemberID=T-M10&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '53'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:02 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: MemberID=T-M10
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:02 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/SaveCard.idPass
+    body:
+      encoding: US-ASCII
+      string: MemberID=T-M10&CardNo=<CARD_NO_Y>&Expire=<CARD_EXPIRE>&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:02 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: CardSeq=0&CardNo=<CARD_NO_Y_MASK>&Forward=2a99662
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:03 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
+    body:
+      encoding: US-ASCII
+      string: OrderID=T-6&JobCd=AUTH&Amount=1&TdFlag=1&TdTenantName=REVWpcaluaXIpM7Fucre&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '113'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:02 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: AccessID=a88827db6086aae05e70ae5376bdbcc6&AccessPass=f472c68f6e9c7b039f4cac0c16794414
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:03 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
+    body:
+      encoding: US-ASCII
+      string: AccessID=a88827db6086aae05e70ae5376bdbcc6&AccessPass=f472c68f6e9c7b039f4cac0c16794414&OrderID=T-6&MemberID=T-M10&CardSeq=0&HttpAccept=*%2F*&HttpUserAgent=Rspec&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran_member_3d&ClientFieldFlag=1&DeviceCategory=0&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '335'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:03 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ACS=1&ACSUrl=<ACS_URL>&PaReq=eJxVUsFu4jAQ/ZUo98V27ECChqnSZVfbQyq2S3s3joEgkkASFtjbbqWKP+Av9t7+Dqq0n7F2mtL2YHnezOi9mWfDxS5bOj91WaVFPnBZh7qOzlWRpPls4N6Ov34K3AuE8bzUevhDq02pEWJdVXKmnTQZuCN5o9dMeD0WBoJ6YVeEfo/xngiCkPkBp6IrXIRRZNoQWiE0Oh0PyCs0jKWay7xGkGp9eXWNgnlc+EBaCJkur4bYJLu9IKRt+SUNucw0Dr/cne4fTn8eT/eH0++/z0/Hf4cjkKYGqtjkdblHyrtAXgFsyiXO63rVJ2S73XZmK7nPdF5XHVVkBIgtA3mbbbSxUWXodmmC8SLaXY+jX/Hi+z4eR9t42J5FNABiOyCRtUaPMp9yTzjM61Pap2bvJg8ys3MgM1u+RLCyAtE5/R6Csb40L7NHHhqGMwK9WxW5GRopkHMMia4UOkbJ3kDeJv/8zXqsamNbyEIp/MmUT+V0wic+U0HCOQ8k86bW+abJ8qfGK2Y8bwQsAGJpSPuopP0PJvrwT/4DRqfJAA==&MD=a88827db6086aae05e70ae5376bdbcc6
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:03 GMT
+recorded_with: VCR 2.9.3

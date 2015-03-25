@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
+    body:
+      encoding: US-ASCII
+      string: OrderID=T-4&JobCd=AUTH&Amount=1&Tax=1&TdFlag=1&TdTenantName=REVWpcaluaXIpM7Fucre&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '119'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:05:21 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: AccessID=365441d388c41ddae535c24c6cebdad4&AccessPass=eb03a490526de621fa66427240a77830
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:05:22 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
+    body:
+      encoding: US-ASCII
+      string: AccessID=365441d388c41ddae535c24c6cebdad4&AccessPass=eb03a490526de621fa66427240a77830&OrderID=T-4&CardNo=<CARD_NO_Y>&Expire=<CARD_EXPIRE>&HttpAccept=*%2F*&HttpUserAgent=Rspec&Method=3&PayTimes=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23secure_tran&ClientFieldFlag=1&DeviceCategory=0
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '310'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:05:22 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ACS=1&ACSUrl=<ACS_URL>&PaReq=eJxVUkFu2zAQ/Iqge02RlCzJWG+g1C2agwy3dXunKdqWEUmOJNd2b02AIj/IL3pvv2MU6DO6VBQnORC7s7vYGQ4JF4fi2vlm6iavyrHLB57rmFJXWV6uxu6X+fs3kXuBMF/Xxkw+G72rDUJqmkatjJNnY3emPpkb7ouQx1EohJBRGAUR58HQj0M+9CTFoYswS2gOoWdCIhoIYE+QVtZ6rcoWQemby6sp+lxIPwDWQyhMfTXBrjgMo9jr249lKFVhcPLu6+nu5+n29+nu/vTj198/D//uH4B1PdDVrmzrI5IgYE8AdvU1rtt2O2Jsv98PVlt1LEzZNgNdFQyYbQN71jbb2ayhdYc8w3STHKbz5Hu6+XhM5wlPJ8nenukmGQOzE5Cp1qDweOBJ4TtcjLxgJOjeXR1UYXUg4T6DrSVIzuWXEMj7mp7miDKm1hmBOWyrkkSjB+ycQ2YajQ4x2QjsWfnbD9Zj3ZJtMY+VHyyWcqmWC7kIuI4yKWWkuFha57shuz8nrzh53hFYAMyuYf2jsv5DUPbqo/wHhlbI9w==&MD=365441d388c41ddae535c24c6cebdad4
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:05:23 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/SecureTran.idPass
+    body:
+      encoding: US-ASCII
+      string: MD=365441d388c41ddae535c24c6cebdad4&PaRes=eJydVlmTokoWfvdXVNR9NLrZETsobySLCIKyb2%2FIDgoqCOivH9C61TUdEzETQwRB5sfJ76x5Mum%2F%0D%0Ah9PxrYuvTV5XH%2B%2FIT%2Fj9La7COsqr9OPdMtc%2FqPe3pg2qKDjWVfzxXtXvf69oM7vGMWfE4e0ar2gl%0D%0Abpogjd%2Fy6ONdDfT4guDoAllSCxRFMWpBERSCECS%2BXCAkjI1f8n1Fq0CPm%2BcKl3AkypHtRGCNPRrh%0D%0A1smFBcCvAQDwKPhp22o07SdKQ%2F9MR6XXMAuqdkUH4YURdyscQTGcoKHPKX2KryK3eoLkglrCn79f%0D%0AMA39Xq%2FeplEzOjLk0UopwLAzwUMptLtiAkThQD%2B9uwJ80NAkQUdBG69QGCFgDMXfEPQXTPxCR9ue%0D%0AOH2e6MCpvo3cI%2Fh9So%2Fxuo7hva%2Bw5fjra0bHw3mM7igB09DXmIZ%2BW3YOqhX87cEwZOIeUdp0V3Sb%0D%0An75ZhCK%2F4MUvnKKhJ06P%2BWtvzcqjoc8RHQZdtwLTo4kcA3gW9BoDUoUHr2f09ClCx2G%2BgseoTd%2Fn%0D%0AKnBM62veZqfJt38HaGgyBXpmdkUbeVqNyq7x21hhVfPxnrXt%2BRcE9X3%2Fs8d%2B1tcUQkdHIHgJjQJR%0D%0Ak6d%2Fvb9WxZFYJfWKZoOqrvIwOOaPoB1zrsRtVkdvXwr%2FE6WpT6wIpPPsj5H2R4jg1Y8JgTGEeIe%2B%0D%0AmfW%2FsP1p4LUJfjRZgExEepzEU%2FbiN0sXP97%2F%2Bi9lzOVp3LT%2Fj9J%2FFL4Y7OB4i1dLjBWXZK7bia5G%0D%0AuYs1SCYc7IuwaL0xdd8laejL0HH8PbxfkXgJugtvX4kJfuRI%2FEhu%2FQHZ4ozImZnFtKxd6%2B7W8DHZ%0D%0AXguH1IsP7IaqWzffkKp246%2BmVDejsz0VLWPscZ7P7lJY9OU17dii4FEZP%2FWVFIIdhByF9LFR8Mzc%0D%0A3NFmQRjHBi6b9tq1myLqvTu0K2BvLQ3KpbZySzP2SnmeISh33xacWad9F4oWnmKL6xw4iiY1pK9J%0D%0AeEAeBKU5kArfqnfPWlw5yhM0yks9oY1rU3d9ce7tNxjHb9pZbaQRo1I5BM%2BDMtFKzh%2Fwee25Ba7v%0D%0A4rLEqpjlpIcb7R%2BemmyM6nE7UIHw0F2rzQZ2dN4VWeqm3wDAixmzzrBy2Dee4SW24Lr3c7HciMez%0D%0AYkvbwmmV8DJP79rHxyvw34JNb%2BP7KwsuAS%2B5oA1eIza%2Btnky1vzYSBRR5GWOZcFgpKAXx%2B0pSkA6%0D%0AdP4mAidbDxQAj6V2EQzxgHEazzCaBRRRyBSt6VnN42xNE%2Fhe2locr80UgAsAsaaNvrHQ9TkS1q1n%0D%0A8upEMuFM3ws2ur57jnRWjLSX0ifBlmOWqgGXqe4MRw%2FT74GjpDPDIcrI3cFhVaYaSt1kllEiQbsp%0D%0AutLzL80yB86MaTBm5DL9AZPgsZX28ouU49joSWq4u8cscuy7KKxvPsvwgStNWrqJ2MLsfFxYBg6R%0D%0ARYKVajDfb7Jwp5h8v%2BPEsTdPLw87E1ZMGE%2FMvsCCZfIHLyugfLmXKaxxBAPPgT2T7uwxmCaD7LLA%0D%0A1bODww%2FcA%2BxeeGgyxygLT%2Bt8Fph8rbDeK26ZkphwK4m83fjO6PrpWIj88eZv7Ee0kQiR33Vy3qfm%0D%0ARi%2FlgrcVRnmtGxRFs5D1TP8eCz3t15%2Bx4PtXgG1hJGIZKcR2iO%2BKfZry%2BZ8ZBmOGAS4yM64Hk8AW%0D%0A1GNZaKxIiSZ0ynRD85cyQbZZkg8OKTwgn1IgaB6BuLaotXxMlU3hclhPNG6RM%2BHZDDBdmcF9t7uH%0D%0A%2FNnOWu9W8IfD8qTha0LiC6w0oAyrcbnfiahKcVkI9eqDbfrH8pJtQdPDdXyTnUDIuCJEt3nHzGrE%0D%0AiobM1%2BT1hbvZGcqlJm96RFbMB%2FHsFLWAGRKvmLHlsveOioQ43CdlaPldeyIFXd1wnFjpCdOQpS3N%0D%0AttJcbrjsUoQHS%2B2SDFp7ArJfFIuH0HDLRR3nCpv0e1NpzfCcQMRAUE2byHV0qY61JamHE6zUYZCK%0D%0AB2o%2BU4kTsetCh5IzCnEqZhhbBq8Vg80UqYQhZtdwwiZvt2DfNKQeXq%2Fy5TqeiAwAQhE%2FGOKzlCK%2B%0D%0A19hxO43VDDzJE30ReAdcS%2Fkdw1DOxlr2vkOYFtynOmrffFcai9cux%2FI4hpV%2B9sey8Vz9qDDPbRdx%0D%0AqebMGMa8do81Hob86dKXvLHBkZbfy4eeStkCJFNhbgyFFzjgpIx5sjIHNF69dDenfd8SKpzKh4bX%0D%0AdIMDuxmTlpeszIVlD0%2F1Mh4%2FexZoPNBIkbBQTaq6ASUF%2BYj5JkhKBB6GYnswcrtT4ePiot043KN6%0D%0A4TiMDQebzcm9u8Cabn5v2yjApevScwd90d9anSMXvCp2W1%2Fq7P0cRtataVqIUnXFWq44k9jy8z5P%0D%0AD9oyO2eEUJvEjMi9vIPh%2BpC5F4Fhwr0M1QKCt5eGP2JXGyVNNdyRlMTkxl5MQBLuhrNPRBJhq0Uy%0D%0Az8Fuebl5HAl3uKTPREM%2FssNZLTf8Mnz0qrvFi9uckwqxMqJHJUbrU5yo%2Ft6f35Urky7umPYg7i4g%0D%0AB9ILCVM4NciyNA6xevbkWZbGmFEnXOZ0TK%2FpOzb0i33oJicHobby2cs6aVH6alnc2Q0qJRjfwS6p%0D%0AnfjDJk4Wz%2Fb%2BZ%2B9%2BIa%2B%2BDn31%2Bt%2BnwPP%2B%2Bbw0T7em75fpfwENxcEn%0D%0A
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '3058'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:09:28 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        T3JkZXJJRD1ULTQmRm9yd2FyZD0yYTk5NjYyJk1ldGhvZD0zJlBheVRpbWVz
+        PSZBcHByb3ZlPTY2MTEzNTYmVHJhbklEPTE1MDMyNDIxMDkxMTExMTExMTEx
+        MTE4NzI0NjYmVHJhbkRhdGU9MjAxNTAzMjQyMTA5MjgmQ2hlY2tTdHJpbmc9
+        MjFhN2RkMTZjYWY0ODQ1NzRkMGU1OWIyMTI2MmU3MTQmQ2xpZW50RmllbGQx
+        PURFVlRFU1QmQ2xpZW50RmllbGQyPYpKlK2DZYNYg2cmQ2xpZW50RmllbGQz
+        PSNzZWN1cmVfdHJhbg==
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:09:29 GMT
+recorded_with: VCR 2.9.3

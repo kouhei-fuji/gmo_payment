@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
+    body:
+      encoding: US-ASCII
+      string: OrderID=T-2&JobCd=CAPTURE&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:20 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: AccessID=6b4d74cb8324c018c407140d0dab4ad1&AccessPass=d1c6885d8bd45c74fd50dfc91c48441b
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:21 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
+    body:
+      encoding: US-ASCII
+      string: AccessID=6b4d74cb8324c018c407140d0dab4ad1&AccessPass=d1c6885d8bd45c74fd50dfc91c48441b&OrderID=T-2&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran&ClientFieldFlag=1
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '243'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:21 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        QUNTPTAmT3JkZXJJRD1ULTImRm9yd2FyZD0yYTk5NjYyJk1ldGhvZD0xJlBh
+        eVRpbWVzPSZBcHByb3ZlPTY2MTEyNzMmVHJhbklEPTE1MDMyNDIxMDAxMTEx
+        MTExMTExMTE4NzIzODUmVHJhbkRhdGU9MjAxNTAzMjQyMTAwMjEmQ2hlY2tT
+        dHJpbmc9YTUyOTJlNTFiYTk1NGNlMWIyZTBlYTUwZDk1MjQwMjAmQ2xpZW50
+        RmllbGQxPURFVlRFU1QmQ2xpZW50RmllbGQyPYpKlK2DZYNYg2cmQ2xpZW50
+        RmllbGQzPSNleGVjX3RyYW4=
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:22 GMT
+recorded_with: VCR 2.9.3

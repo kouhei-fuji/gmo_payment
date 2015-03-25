@@ -1,0 +1,157 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/SaveMember.idPass
+    body:
+      encoding: US-ASCII
+      string: MemberID=T-M11&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '53'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:03 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: MemberID=T-M11
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:04 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
+    body:
+      encoding: US-ASCII
+      string: OrderID=T-12&JobCd=AUTH&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '71'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:03 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: AccessID=d3cd3697c73aab977970b3cb30247719&AccessPass=54af311d1a973f8c023227b63219cb72
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:04 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
+    body:
+      encoding: US-ASCII
+      string: AccessID=d3cd3697c73aab977970b3cb30247719&AccessPass=54af311d1a973f8c023227b63219cb72&OrderID=T-12&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23save_traded_card&ClientFieldFlag=1
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '251'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:05 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        QUNTPTAmT3JkZXJJRD1ULTEyJkZvcndhcmQ9MmE5OTY2MiZNZXRob2Q9MSZQ
+        YXlUaW1lcz0mQXBwcm92ZT02NjExMjU3JlRyYW5JRD0xNTAzMjQyMTAwMTEx
+        MTExMTExMTExODcyMzY5JlRyYW5EYXRlPTIwMTUwMzI0MjEwMDA0JkNoZWNr
+        U3RyaW5nPTU3OGYzYzdhYzc4MWYzMDM4YTRjYzNiMGNkZDRhMzhjJkNsaWVu
+        dEZpZWxkMT1ERVZURVNUJkNsaWVudEZpZWxkMj2KSpStg2WDWINnJkNsaWVu
+        dEZpZWxkMz0jc2F2ZV90cmFkZWRfY2FyZA==
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:05 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/TradedCard.idPass
+    body:
+      encoding: US-ASCII
+      string: OrderID=T-12&MemberID=T-M11&SiteID=<SITE_ID>&SitePass=<SITE_PASS>&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '105'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:05 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: CardSeq=0&CardNo=<CARD_NO_N_MASK>&Forward=2a99662
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:05 GMT
+recorded_with: VCR 2.9.3

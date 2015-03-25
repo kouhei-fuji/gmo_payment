@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
+    body:
+      encoding: US-ASCII
+      string: OrderID=T-7&JobCd=AUTH&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '70'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:12 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: AccessID=c8d88e10b497fbf60eba2a2d5efd7d1c&AccessPass=0ba473433a31c42ed1fd7e45811c72f3
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:13 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
+    body:
+      encoding: US-ASCII
+      string: AccessID=c8d88e10b497fbf60eba2a2d5efd7d1c&AccessPass=0ba473433a31c42ed1fd7e45811c72f3&OrderID=T-7&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23delete_tran&ClientFieldFlag=1
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '245'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:13 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        QUNTPTAmT3JkZXJJRD1ULTcmRm9yd2FyZD0yYTk5NjYyJk1ldGhvZD0xJlBh
+        eVRpbWVzPSZBcHByb3ZlPTY2MTEyNjUmVHJhbklEPTE1MDMyNDIxMDAxMTEx
+        MTExMTExMTE4NzIzNzcmVHJhbkRhdGU9MjAxNTAzMjQyMTAwMTMmQ2hlY2tT
+        dHJpbmc9NzE2MzNiMWIzYzZiNzlkN2ZlMDBmM2U2MjAyZmJiNmYmQ2xpZW50
+        RmllbGQxPURFVlRFU1QmQ2xpZW50RmllbGQyPYpKlK2DZYNYg2cmQ2xpZW50
+        RmllbGQzPSNkZWxldGVfdHJhbg==
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:14 GMT
+- request:
+    method: post
+    uri: https://<API_ENDPOINT>/payment/AlterTran.idPass
+    body:
+      encoding: US-ASCII
+      string: AccessID=c8d88e10b497fbf60eba2a2d5efd7d1c&AccessPass=0ba473433a31c42ed1fd7e45811c72f3&JobCd=VOID&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+    headers:
+      Accept:
+      - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
+      User-Agent:
+      - RubyGem/GmoPayment/0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Content-Length:
+      - '135'
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 24 Mar 2015 12:00:14 GMT
+      Content-Type:
+      - text/plain;charset=Windows-31J
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: AccessID=c8d88e10b497fbf60eba2a2d5efd7d1c&AccessPass=0ba473433a31c42ed1fd7e45811c72f3&Forward=2a99662&Approve=6611266&TranID=1503242100111111111111872378&TranDate=20150324210013
+    http_version: 
+  recorded_at: Tue, 24 Mar 2015 12:00:14 GMT
+recorded_with: VCR 2.9.3
