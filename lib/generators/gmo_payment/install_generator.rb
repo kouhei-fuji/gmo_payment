@@ -8,7 +8,7 @@ module GmoPayment
       desc 'Copy GmoPayment error message locale file to your application.'
 
       def copy_locales
-        copy_file 'ja.yml', 'app/config/locales/gmo_payment.ja.yml'
+        copy_file 'ja.yml', 'config/gmo_payment.ja.yml'
       end
     end
   end
