@@ -772,11 +772,11 @@ describe GmoPayment::Client, :vcr do
 
   describe '#get_rate_btc' do
     let(:call_method) { '#get_rate_btc' }
-    it 'return 1 item'# do
-    #   args = {}
-    #   response = client.get_rate_btc(args)
-    #   expect(response.medium).not_to be(nil)
-    # end
+    it 'return 1 item' do
+      args = {}
+      response = client.get_rate_btc(args)
+      expect(response.medium).not_to be(nil)
+    end
   end
 
   describe '#search_trade_btc' do
