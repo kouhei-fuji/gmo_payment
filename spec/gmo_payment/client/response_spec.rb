@@ -4,6 +4,12 @@ require 'spec_helper'
 describe GmoPayment::Client::Response, :vcr do
   subject { GmoPayment::Client::Response.new(method, args) }
 
+  describe '#called_method' do
+    let(:method) { :entry_tran }
+    let(:args) { {} }
+    it { expect(subject.called_method).to be(method) }
+  end
+
   describe '#called_return_array?' do
     let(:args) { nil }
     context 'with Client#search_card' do

@@ -5,6 +5,11 @@ describe GmoPayment::Client::Request do
   before { GmoPayment.reset! }
   subject { GmoPayment::Client::Request.new(:entry_tran, args) }
 
+  describe '#called_method' do
+    let(:args) { {} }
+    it { expect(subject.called_method).to eq(:entry_tran) }
+  end
+
   describe '#missing_items' do
     let(:args) { {} }
     it { expect(subject.missing_items).to be_a(Array) }

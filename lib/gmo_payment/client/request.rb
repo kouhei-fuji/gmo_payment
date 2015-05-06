@@ -31,6 +31,9 @@ module GmoPayment
         @invalid_items = self.invalid_items
       end
 
+      # @!attribute [r] called_method
+      attr_reader :called_method
+
       # Check missing items.
       #
       # @return [Array]

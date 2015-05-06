@@ -10,6 +10,9 @@ module GmoPayment
         @response = response
       end
 
+      # @!attribute [r] called_method
+      attr_reader :called_method
+
       # Whether {#prebody} which of Hash values should return array or not.
       # If called {GmoPayment::Api#search_card}, it will return true.
       def called_return_array?
