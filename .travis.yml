@@ -1,3 +1,20 @@
 language: ruby
 rvm:
   - 2.0.0
+  - 2.1
+  - 2.2
+env:
+  global:
+    - GMO_TEST_API_ENDPOINT="example.com"
+    - GMO_TEST_SITE_ID="SITEID"
+    - GMO_TEST_SITE_PASS="SITEPASS"
+    - GMO_TEST_SHOP_ID="SHOPID"
+    - GMO_TEST_SHOP_PASS="SHOPPASS"
+    - GMO_TEST_CARD_EXPIRE="0000"
+    - GMO_TEST_CARD_NO_N="0000000000000000"
+    - GMO_TEST_CARD_NO_N_MASK="*************000"
+    - GMO_TEST_CARD_NO_Y="9999999999999999"
+    - GMO_TEST_CARD_NO_Y_MASK="*************999"
+    - GMO_TEST_ACS_URL="https://example.com/"
+    - GMO_TEST_BTC_URL="https://example.com/"
+bundler_args: --without docs
