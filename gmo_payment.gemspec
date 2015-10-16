@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = GmoPayment::VERSION
   spec.authors       = ['Kouhei Fujigaya']
   spec.email         = ['kouhei.fujigaya@gmail.com']
-  spec.summary       = %q{Ruby client for the GMO-PG API.}
+  spec.summary       = %q{Ruby client for GMO-PG API.}
   spec.description   = %q{Ruby client for the protocol type API provided by GMO Payment Gateway.}
   spec.homepage      = 'https://github.com/kouhei-fuji/gmo_payment'
   spec.license       = 'MIT'
@@ -19,13 +19,4 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.required_ruby_version = '>= 2.0.0'
-
-  spec.add_development_dependency 'bundler', '~> 1.7'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '>= 3'
-  spec.add_development_dependency 'simplecov', '~> 0.9.0'
-  spec.add_development_dependency 'coveralls'
-  spec.add_development_dependency 'webmock'
-  spec.add_development_dependency 'vcr'
-  spec.add_development_dependency 'yard'
 end
