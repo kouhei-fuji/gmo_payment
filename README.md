@@ -1,5 +1,7 @@
 # GmoPayment
 
+[![Build Status](https://travis-ci.org/kouhei-fuji/gmo_payment.svg?branch=master)](https://travis-ci.org/kouhei-fuji/gmo_payment) [![Coverage Status](https://coveralls.io/repos/kouhei-fuji/gmo_payment/badge.svg?branch=master&service=github)](https://coveralls.io/github/kouhei-fuji/gmo_payment?branch=master) [![Gem Version](https://badge.fury.io/rb/gmo_payment.svg)](https://badge.fury.io/rb/gmo_payment)
+
 Ruby client for the protocol type API provided by GMO Payment Gateway.
 
 This library includes:
