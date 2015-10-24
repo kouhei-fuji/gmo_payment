@@ -17,4 +17,7 @@ env:
     - GMO_TEST_CARD_NO_Y_MASK="*************999"
     - GMO_TEST_ACS_URL="https://example.com/"
     - GMO_TEST_BTC_URL="https://example.com/"
-bundler_args: --without docs
+bundler_args: --without docs development
+notifications:
+  slack:
+    secure: I2C1iHx9Vq8U9DtBeernMNCzSoo7pLWz1Cdy8ya/Kx2yAvCcNAAnB697EBH2h38O0QkCjRR0IcHgv3yzpVyKSx7YuNLwLyljhvgoiSGtCK7wcMnlmtrQ2tR/0Ef+R1o83YAma7P34yo41FUmwbr7+77sCfEGlZZqzttBt0a9Gg9uekYptw2zu/dO1QWxNeyHbfm0ChlMq0/KKRK4StpZG4XKK1dWlf4agU9I93aNkc8u/h6gbNdpK4BoeLSgJEguSpFmboL6dsVyR7ZqnoQfHSWJdxlKsW+UyKo9ZiDvUoV8lx3/wR0G/cxG25jalcEojFhUN+clGdfFINhFJTgJzZTU509UvjPrPG+MosDrvmGzLU5uCx+2wZ6PQl/vJNYvlfR708XsUS6iNcqZpklqNV09hMgrFzqersu+dqaIzQjb9BgPOs1Rgc4TbCgEdsqE+YvxIcocHZyCuhmrgGGYuPFeYCm6PxLf+C0hacvgz6YG0ZQJ3tmcpUxDgIFJaMUgOP6g5qX4+nfrDe8DV4BZzM4hMrITEyJR1qmJD1ik8bRO5BFG/yhdYWSEmlRfIwBNA9PlfDbrRvFbzzzfPyrrOl7jJrk2BKXWfXee15y4iNcquXbGcUG3qyqutY2B4aRWL0rW93yOzIi9pqG5OEqwLqQT6mGkFdiseK8VwpBV6wI=
