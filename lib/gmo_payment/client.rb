@@ -51,7 +51,7 @@ module GmoPayment
       http = ::Net::HTTP.new(@options.api_endpoint, 443,
         proxy.host, proxy.port, proxy.user, proxy.password)
       http.use_ssl      = true
-      http.ssl_version  = :TLSv1
+      http.ssl_version  = :TLSv1_2
       http.verify_mode  = @options.verify_mode
       http.ssl_timeout  = 120
       http.open_timeout = 15
