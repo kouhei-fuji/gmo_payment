@@ -6,9 +6,9 @@ Ruby client for the protocol type API provided by GMO Payment Gateway.
 
 This library includes:
 
-- Credit-Card protocol API - Version: 2014/03/18 1.13
-- Multi-Payment protocol API (Bitcoin) - Version: 2015/04/01 1.32
-- ErrorCode - Version: 2015/02/26 1.43
+* Credit-Card protocol API - Version: 2014/03/18 1.13
+* Multi-Payment protocol API (Bitcoin) - Version: 2015/04/01 1.32
+* ErrorCode - Version: 2015/02/26 1.43
 
 ## Installation
 
@@ -73,28 +73,26 @@ You can use generator in Ruby on Rails:
 
 If you want to test in your environment, you have to define:
 
-- GMO_TEST_API_ENDPOINT
-- GMO_TEST_SITE_ID
-- GMO_TEST_SITE_PASS
-- GMO_TEST_SHOP_ID
-- GMO_TEST_SHOP_PASS
-- GMO_TEST_CARD_EXPIRE
-- GMO_TEST_CARD_NO_N
-  => _Non-ACS test card number_
-- GMO_TEST_CARD_NO_N_MASK
-- GMO_TEST_CARD_NO_Y
-  => _ACS test card number_
-- GMO_TEST_CARD_NO_Y_MASK
-- GMO_TEST_ACS_URL
-- GMO_TEST_BTC_URL
+* `GMO_TEST_API_ENDPOINT`
+* `GMO_TEST_SITE_ID`
+* `GMO_TEST_SITE_PASS`
+* `GMO_TEST_SHOP_ID`
+* `GMO_TEST_SHOP_PASS`
+* `GMO_TEST_CARD_EXPIRE`
+* `GMO_TEST_CARD_NO_N`: _Non-ACS test card number_
+* `GMO_TEST_CARD_NO_N_MASK`
+* `GMO_TEST_CARD_NO_Y`: _ACS test card number_
+* `GMO_TEST_CARD_NO_Y_MASK`
+* `GMO_TEST_ACS_URL`
+* `GMO_TEST_BTC_URL`
 
 ## Contributing
 
-1. Fork it (https://github.com/kouhei-fuji/gmo_payment/fork)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+1.  Fork it (https://github.com/kouhei-fuji/gmo_payment/fork)
+2.  Create your feature branch (`git checkout -b my-new-feature`)
+3.  Commit your changes (`git commit -am 'Add some feature'`)
+4.  Push to the branch (`git push origin my-new-feature`)
+5.  Create a new Pull Request
 
 ## License
 
