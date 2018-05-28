@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
@@ -25,9 +25,9 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 02 Apr 2015 07:59:30 GMT
+      - Mon, 28 May 2018 09:15:22 GMT
       Content-Type:
-      - text/plain;charset=ISO-8859-1
+      - text/plain;charset=Shift_JIS
       Content-Length:
       - '12'
       Connection:
@@ -38,5 +38,5 @@ http_interactions:
       encoding: UTF-8
       string: medium=45000
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 07:59:32 GMT
+  recorded_at: Mon, 28 May 2018 09:15:22 GMT
 recorded_with: VCR 2.9.3

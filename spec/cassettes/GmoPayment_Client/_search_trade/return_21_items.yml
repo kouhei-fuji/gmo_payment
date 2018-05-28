@@ -5,16 +5,16 @@ http_interactions:
     uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-11&JobCd=CHECK&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=2db07fe1fb2b837d77c1ded6b3&JobCd=CHECK&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '63'
+      - '85'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:22 GMT
+      - Mon, 28 May 2018 09:15:14 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -34,24 +34,24 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: AccessID=500dac4da32c5ce53cadbf689b09e6b6&AccessPass=7939d1be6d0739c79795d8617a33ca80
+      string: AccessID=715efe227cc56dda8418d58d224dd7c9&AccessPass=aa0f06efb4100e4d62cc7477ab7649b3
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:23 GMT
+  recorded_at: Mon, 28 May 2018 09:15:14 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/SearchTrade.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-11&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=2db07fe1fb2b837d77c1ded6b3&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '51'
+      - '73'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -62,7 +62,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:22 GMT
+      - Mon, 28 May 2018 09:15:14 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -71,7 +71,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: OrderID=T-11&Status=UNPROCESSED&ProcessDate=20150324210022&JobCd=CHECK&AccessID=500dac4da32c5ce53cadbf689b09e6b6&AccessPass=7939d1be6d0739c79795d8617a33ca80&ItemCode=0000990&Amount=0&Tax=0&SiteID=&MemberID=&CardNo=&Expire=&Method=&PayTimes=&Forward=&TranID=&Approve=&ClientField1=&ClientField2=&ClientField3=
+      string: OrderID=2db07fe1fb2b837d77c1ded6b3&Status=UNPROCESSED&ProcessDate=20180528181514&JobCd=CHECK&AccessID=715efe227cc56dda8418d58d224dd7c9&AccessPass=aa0f06efb4100e4d62cc7477ab7649b3&ItemCode=0000990&Amount=0&Tax=0&SiteID=&MemberID=&CardNo=&Expire=&Method=&PayTimes=&Forward=&TranID=&Approve=&ClientField1=&ClientField2=&ClientField3=
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:23 GMT
+  recorded_at: Mon, 28 May 2018 09:15:14 GMT
 recorded_with: VCR 2.9.3

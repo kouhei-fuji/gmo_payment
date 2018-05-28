@@ -5,16 +5,16 @@ http_interactions:
     uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-2&JobCd=CAPTURE&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=3780faee5ed8565ff2d991a04a&JobCd=CAPTURE&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '73'
+      - '96'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:20 GMT
+      - Mon, 28 May 2018 09:14:52 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -34,24 +34,24 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: AccessID=6b4d74cb8324c018c407140d0dab4ad1&AccessPass=d1c6885d8bd45c74fd50dfc91c48441b
+      string: AccessID=9a6369901758462abd86254e2c2fe6e6&AccessPass=3e9d7c57d371cd223d5dcf4903338d39
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:21 GMT
+  recorded_at: Mon, 28 May 2018 09:14:52 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
     body:
       encoding: US-ASCII
-      string: AccessID=6b4d74cb8324c018c407140d0dab4ad1&AccessPass=d1c6885d8bd45c74fd50dfc91c48441b&OrderID=T-2&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran&ClientFieldFlag=1
+      string: AccessID=9a6369901758462abd86254e2c2fe6e6&AccessPass=3e9d7c57d371cd223d5dcf4903338d39&OrderID=3780faee5ed8565ff2d991a04a&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran&ClientFieldFlag=1
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '243'
+      - '266'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -62,7 +62,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:21 GMT
+      - Mon, 28 May 2018 09:14:55 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -72,12 +72,12 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        QUNTPTAmT3JkZXJJRD1ULTImRm9yd2FyZD0yYTk5NjYyJk1ldGhvZD0xJlBh
-        eVRpbWVzPSZBcHByb3ZlPTY2MTEyNzMmVHJhbklEPTE1MDMyNDIxMDAxMTEx
-        MTExMTExMTE4NzIzODUmVHJhbkRhdGU9MjAxNTAzMjQyMTAwMjEmQ2hlY2tT
-        dHJpbmc9YTUyOTJlNTFiYTk1NGNlMWIyZTBlYTUwZDk1MjQwMjAmQ2xpZW50
-        RmllbGQxPURFVlRFU1QmQ2xpZW50RmllbGQyPYpKlK2DZYNYg2cmQ2xpZW50
-        RmllbGQzPSNleGVjX3RyYW4=
+        QUNTPTAmT3JkZXJJRD0zNzgwZmFlZTVlZDg1NjVmZjJkOTkxYTA0YSZGb3J3
+        YXJkPTJhOTk2NjImTWV0aG9kPTEmUGF5VGltZXM9JkFwcHJvdmU9NDU2MzI1
+        OSZUcmFuSUQ9MTgwNTI4MTgxNDExMTExMTExMTExMTg3MDkwMiZUcmFuRGF0
+        ZT0yMDE4MDUyODE4MTQ1NSZDaGVja1N0cmluZz1hMmYwZGRhY2MwZDRkODlh
+        NzZhMWQ3YWFlMzAyMjlkMCZDbGllbnRGaWVsZDE9REVWVEVTVCZDbGllbnRG
+        aWVsZDI9ikqUrYNlg1iDZyZDbGllbnRGaWVsZDM9I2V4ZWNfdHJhbg==
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:22 GMT
+  recorded_at: Mon, 28 May 2018 09:14:55 GMT
 recorded_with: VCR 2.9.3

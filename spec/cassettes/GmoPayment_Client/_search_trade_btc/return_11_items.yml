@@ -5,16 +5,16 @@ http_interactions:
     uri: https://<API_ENDPOINT>/payment/EntryTranBTC.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-15&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=f3892400d897c87d7d745ab11b&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '60'
+      - '82'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,9 +25,9 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 13:00:31 GMT
+      - Mon, 28 May 2018 09:15:22 GMT
       Content-Type:
-      - text/plain;charset=ISO-8859-1
+      - text/plain;charset=Shift_JIS
       Content-Length:
       - '85'
       Connection:
@@ -36,24 +36,24 @@ http_interactions:
       - ja-JP
     body:
       encoding: UTF-8
-      string: AccessID=edea655e55661944789e3e0ab4ba733c&AccessPass=762de46cdff762cb925ab8f5757f0a61
+      string: AccessID=2a48b9c2b22063a218911feda3568329&AccessPass=79e922a2fa2a0a0e02527fbd27e5dd6e
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 13:00:32 GMT
+  recorded_at: Mon, 28 May 2018 09:15:22 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/SearchTradeMulti.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-15&PayType=17&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=f3892400d897c87d7d745ab11b&PayType=17&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '62'
+      - '84'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -64,7 +64,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 13:00:31 GMT
+      - Mon, 28 May 2018 09:15:22 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -73,7 +73,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: Status=UNPROCESSED&ProcessDate=20150324220031&JobCd=&AccessID=edea655e55661944789e3e0ab4ba733c&AccessPass=762de46cdff762cb925ab8f5757f0a61&ItemCode=&Amount=1&Tax=0&SiteID=&MemberID=&CardNo=&Expire=&Method=&PayTimes=&Forward=&TranID=&Approve=&ClientField1=&ClientField2=&ClientField3=&PayType=0&CvsCode=&CvsConfNo=&CvsReceiptNo=&EdyReceiptNo=&EdyOrderNo=&SuicaOrderNo=&SuicaReceiptNo=&CustID=&BkCode=&ConfNo=&EncryptReceiptNo=&PaymentTerm=&WebMoneyManagementNo=&WebMoneySettleCode=&AuPayInfoNo=&AuPayMethod=&AuCancelAmount=&AuCancelTax=&DocomoSettlementCode=&DocomoCancelAmount=&DocomoCancelTax=&SbTrackingId=&SbCancelAmount=&SbCancelTax=&JibunReceiptNo=&AccountTimingKbn=&AccountTiming=&FirstAccountDate=&FirstAmount=&FirstTax=&AuContinueAccountId=&AuContinuanceErrCode=&AuContinuanceErrInfo=&JcbPrecaSalesCode=&RequestNo=&AccountNo=&CenterCode=&PreviousAmount=&PreviousTax=&NetCashPayType=&OrderDate=&CompletionDate=&Currency=
+      string: Status=UNPROCESSED&ProcessDate=20180528181522&JobCd=&AccessID=2a48b9c2b22063a218911feda3568329&AccessPass=79e922a2fa2a0a0e02527fbd27e5dd6e&ItemCode=&Amount=1&Tax=0&SiteID=&MemberID=&CardNo=&Expire=&Method=&PayTimes=&Forward=&TranID=&Approve=&ClientField1=&ClientField2=&ClientField3=&PayType=0&CvsCode=&CvsConfNo=&CvsReceiptNo=&EdyReceiptNo=&EdyOrderNo=&SuicaOrderNo=&SuicaReceiptNo=&CustID=&BkCode=&ConfNo=&EncryptReceiptNo=&PaymentTerm=&WebMoneyManagementNo=&WebMoneySettleCode=&AuPayInfoNo=&AuPayMethod=&AuCancelAmount=&AuCancelTax=&DocomoSettlementCode=&DocomoCancelAmount=&DocomoCancelTax=&DocomoIncreaseAmount=&DocomoIncreaseTax=&SbTrackingId=&SbCancelAmount=&SbCancelTax=&JibunReceiptNo=&AccountTimingKbn=&AccountTiming=&FirstAccountDate=&FirstAmount=&FirstTax=&AuContinueAccountId=&AuContinuanceErrCode=&AuContinuanceErrInfo=&JcbPrecaSalesCode=&RequestNo=&AccountNo=&CenterCode=&PreviousAmount=&PreviousTax=&NetCashPayType=&OrderDate=&CompletionDate=&Currency=
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 13:00:32 GMT
+  recorded_at: Mon, 28 May 2018 09:15:22 GMT
 recorded_with: VCR 2.9.3
