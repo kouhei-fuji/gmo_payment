@@ -110,7 +110,7 @@ describe GmoPayment::Errors do
       end
       context 'without file' do
         let(:args) { nil }
-        it { expect { subject.error_messages }.to raise_error }
+        it { expect { subject.error_messages }.to raise_error(TypeError) }
       end
     end
 
