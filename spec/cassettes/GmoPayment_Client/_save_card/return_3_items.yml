@@ -5,16 +5,16 @@ http_interactions:
     uri: https://<API_ENDPOINT>/payment/SaveMember.idPass
     body:
       encoding: US-ASCII
-      string: MemberID=T-M5&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+      string: MemberID=01d25480-1cbd-47a5-a28a-42c484ae47e7&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '52'
+      - '84'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:14 GMT
+      - Mon, 28 May 2018 09:15:29 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -34,24 +34,24 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: MemberID=T-M5
+      string: MemberID=01d25480-1cbd-47a5-a28a-42c484ae47e7
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:15 GMT
+  recorded_at: Mon, 28 May 2018 09:15:30 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/SaveCard.idPass
     body:
       encoding: US-ASCII
-      string: MemberID=T-M5&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+      string: MemberID=01d25480-1cbd-47a5-a28a-42c484ae47e7&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '88'
+      - '120'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -62,7 +62,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:14 GMT
+      - Mon, 28 May 2018 09:15:32 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -73,5 +73,5 @@ http_interactions:
       encoding: UTF-8
       string: CardSeq=0&CardNo=<CARD_NO_N_MASK>&Forward=2a99662
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:15 GMT
+  recorded_at: Mon, 28 May 2018 09:15:32 GMT
 recorded_with: VCR 2.9.3

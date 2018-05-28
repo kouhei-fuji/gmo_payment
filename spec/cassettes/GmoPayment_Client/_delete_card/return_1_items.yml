@@ -5,16 +5,16 @@ http_interactions:
     uri: https://<API_ENDPOINT>/payment/SaveMember.idPass
     body:
       encoding: US-ASCII
-      string: MemberID=T-M7&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+      string: MemberID=6d9f8385-3c6b-476d-ba85-bfd3fa4ce46f&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '52'
+      - '84'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:05 GMT
+      - Mon, 28 May 2018 09:14:55 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -34,24 +34,24 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: MemberID=T-M7
+      string: MemberID=6d9f8385-3c6b-476d-ba85-bfd3fa4ce46f
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:06 GMT
+  recorded_at: Mon, 28 May 2018 09:14:55 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/SaveCard.idPass
     body:
       encoding: US-ASCII
-      string: MemberID=T-M7&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+      string: MemberID=6d9f8385-3c6b-476d-ba85-bfd3fa4ce46f&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '88'
+      - '120'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -62,7 +62,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:06 GMT
+      - Mon, 28 May 2018 09:14:58 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -73,22 +73,22 @@ http_interactions:
       encoding: UTF-8
       string: CardSeq=0&CardNo=<CARD_NO_N_MASK>&Forward=2a99662
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:07 GMT
+  recorded_at: Mon, 28 May 2018 09:14:59 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/DeleteCard.idPass
     body:
       encoding: US-ASCII
-      string: MemberID=T-M7&CardSeq=0&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+      string: MemberID=6d9f8385-3c6b-476d-ba85-bfd3fa4ce46f&CardSeq=0&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '62'
+      - '94'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -99,7 +99,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:06 GMT
+      - Mon, 28 May 2018 09:14:59 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -110,5 +110,5 @@ http_interactions:
       encoding: UTF-8
       string: CardSeq=0
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:07 GMT
+  recorded_at: Mon, 28 May 2018 09:14:59 GMT
 recorded_with: VCR 2.9.3

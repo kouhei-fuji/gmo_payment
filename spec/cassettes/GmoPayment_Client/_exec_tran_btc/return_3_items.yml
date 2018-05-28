@@ -5,16 +5,16 @@ http_interactions:
     uri: https://<API_ENDPOINT>/payment/EntryTranBTC.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-14&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=455b1e78aa061339d5e806d4c3&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '60'
+      - '82'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,9 +25,9 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 13:00:31 GMT
+      - Mon, 28 May 2018 09:14:44 GMT
       Content-Type:
-      - text/plain;charset=ISO-8859-1
+      - text/plain;charset=Shift_JIS
       Content-Length:
       - '85'
       Connection:
@@ -36,24 +36,24 @@ http_interactions:
       - ja-JP
     body:
       encoding: UTF-8
-      string: AccessID=ace2c892ee6b8e75077af1d5454c96ce&AccessPass=1f39badde753b78ebf42bf52df8c3928
+      string: AccessID=c89b752b39ffb0ceaeabf31f51dfafab&AccessPass=c73206727ed665bd540a8296d8c581ca
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 13:00:32 GMT
+  recorded_at: Mon, 28 May 2018 09:14:44 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/ExecTranBTC.idPass
     body:
       encoding: US-ASCII
-      string: AccessID=ace2c892ee6b8e75077af1d5454c96ce&AccessPass=1f39badde753b78ebf42bf52df8c3928&OrderID=T-14&RetURL=https%3A%2F%2Flocalhost%2Frecieve%3Fquery1%3DTest01%26query2%3DDEV%8A%C2%8B%AB%82%CC%83e%83X%83g%82%C5%82%B7%81B&ItemName=DEV%83e%83X%83g%82%CC%8F%A4%95i&ItemMemo=%82%B1%82%EA%82%CDDevelopment%8A%C2%8B%AB%82%CC%83e%83X%83g%97p%82%CC%8F%A4%95i%82%C5%82%B7%81B&Timeout=60&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran_btc&ShopID=<SHOP_ID>
+      string: AccessID=c89b752b39ffb0ceaeabf31f51dfafab&AccessPass=c73206727ed665bd540a8296d8c581ca&OrderID=455b1e78aa061339d5e806d4c3&RetURL=https%3A%2F%2Flocalhost%2Frecieve%3Fquery1%3DTest01%26query2%3DDEV%8A%C2%8B%AB%82%CC%83e%83X%83g%82%C5%82%B7%81B&ItemName=DEV%83e%83X%83g%82%CC%8F%A4%95i&Timeout=60&ItemMemo=%82%B1%82%EA%82%CDDevelopment%8A%C2%8B%AB%82%CC%83e%83X%83g%97p%82%CC%8F%A4%95i%82%C5%82%B7%81B&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran_btc&ShopID=<SHOP_ID>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '483'
+      - '505'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -64,9 +64,9 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 13:00:31 GMT
+      - Mon, 28 May 2018 09:14:44 GMT
       Content-Type:
-      - text/plain;charset=ISO-8859-1
+      - text/plain;charset=Shift_JIS
       Content-Length:
       - '169'
       Connection:
@@ -75,7 +75,7 @@ http_interactions:
       - ja-JP
     body:
       encoding: UTF-8
-      string: AccessID=ace2c892ee6b8e75077af1d5454c96ce&Token=mh/OQF1vrmIJd2zhqQahqaOy9ZHtEQYIJAxkIpumKvUKf+EoycDfaudKiVcKv4iC&StartURL=<BTC_URL>
+      string: AccessID=c89b752b39ffb0ceaeabf31f51dfafab&Token=nsA/HRsTHjYpAma8C5rSghI4Z8UoHPt9UI8aYeOE6tEKf+EoycDfaudKiVcKv4iC&StartURL=https://<API_ENDPOINT>/payment/BTCStart.idPass
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 13:00:33 GMT
+  recorded_at: Mon, 28 May 2018 09:14:44 GMT
 recorded_with: VCR 2.9.3

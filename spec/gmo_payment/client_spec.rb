@@ -1,6 +1,9 @@
 # coding: utf-8
 require 'spec_helper'
 
+is_cassette_available = -> { VCR.current_cassette.originally_recorded_at }
+uuid = -> (name:, index: 0) { YAML.load_file(VCR.current_cassette.file)['http_interactions'][index]['request']['body']['string'].match(/#{GmoPayment::GLOSSARY[name]}=([^&]+)/)[1] }
+
 describe GmoPayment::Client, :vcr do
   describe '#call' do
     before { GmoPayment.reset! }
@@ -102,7 +105,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#entry_tran' do
     let(:call_method) { '#entry_tran' }
-    let(:order_id) { 'T-1' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 2 items' do
       args = {
         :order_id => order_id,
@@ -116,7 +119,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#exec_tran' do
     let(:call_method) { '#exec_tran' }
-    let(:order_id) { 'T-2' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 12 items' do
       args1 = {
         :order_id => order_id,
@@ -153,7 +156,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#exec_tran_3d' do
     let(:call_method) { '#exec_tran_3d' }
-    let(:order_id) { 'T-3' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 4 items' do
       args1 = {
         :order_id       => order_id,
@@ -188,7 +191,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#secure_tran' do
     let(:call_method) { '#secure_tran' }
-    let(:order_id) { 'T-4' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 11 items' do
       args1 = {
         :order_id       => order_id,
@@ -216,8 +219,42 @@ describe GmoPayment::Client, :vcr do
       client.exec_tran_3d(args2)
       # After the operation in the browser, "MD" and "PaRes" will be returned.
       args3 = {
-        :md     => "365441d388c41ddae535c24c6cebdad4",
-        :pa_res => "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\r\n"
+        :md     => "7aacaf1ed56f6de279f1dbdf71c1caf2",
+        :pa_res => "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"
       }
       response = client.secure_tran(args3)
       expect(response.order_id).to eq(order_id)
@@ -236,7 +273,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#save_member' do
     let(:call_method) { '#save_member' }
-    let(:member_id) { 'T-M1' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
     it 'return 1 items' do
       args = {
         :member_id => member_id
@@ -248,7 +285,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#update_member' do
     let(:call_method) { '#update_member' }
-    let(:member_id) { 'T-M2' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
     it 'return 1 items' do
       member_name_old = 'old_name'
       member_name_new = 'new_name'
@@ -268,7 +305,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#delete_member' do
     let(:call_method) { '#delete_member' }
-    let(:member_id) { 'T-M3' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
     it 'return 1 items' do
       args1 = {
         :member_id => member_id
@@ -284,7 +321,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#search_member' do
     let(:call_method) { '#search_member' }
-    let(:member_id) { 'T-M4' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
     it 'return 3 items' do
       member_name = 'member_name'
       args1 = {
@@ -304,7 +341,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#save_card' do
     let(:call_method) { '#save_card' }
-    let(:member_id) { 'T-M5' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
     it 'return 3 items' do
       args1 = {
         :member_id => member_id
@@ -324,7 +361,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#update_card' do
     let(:call_method) { '#update_card' }
-    let(:member_id) { 'T-M6' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
     it 'return 3 items' do
       args1 = {
         :member_id => member_id
@@ -351,7 +388,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#delete_card' do
     let(:call_method) { '#delete_card' }
-    let(:member_id) { 'T-M7' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
     it 'return 1 items' do
       args1 = {
         :member_id => member_id
@@ -374,7 +411,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#search_card' do
     let(:call_method) { '#search_card' }
-    let(:member_id) { 'T-M8' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
     it 'return 7 items' do
       args1 = {
         :member_id => member_id
@@ -403,8 +440,8 @@ describe GmoPayment::Client, :vcr do
 
   describe '#exec_tran_member' do
     let(:call_method) { '#exec_tran_member' }
-    let(:order_id) { 'T-5' }
-    let(:member_id) { 'T-M9' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id, index: 2) : SecureRandom.hex(27/2) }
     it 'return 12 items' do
       args1 = {
         :member_id => member_id
@@ -451,8 +488,8 @@ describe GmoPayment::Client, :vcr do
 
   describe '#exec_tran_member_3d' do
     let(:call_method) { '#exec_tran_member_3d' }
-    let(:order_id) { 'T-6' }
-    let(:member_id) { 'T-M10' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id, index: 2) : SecureRandom.hex(27/2) }
     it 'return 4 items' do
       args1 = {
         :member_id => member_id
@@ -495,7 +532,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#delete_tran' do
     let(:call_method) { '#delete_tran' }
-    let(:order_id) { 'T-7' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 6 items' do
       args1 = {
         :order_id => order_id,
@@ -532,7 +569,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#re_exec_tran' do
     let(:call_method) { '#re_exec_tran' }
-    let(:order_id) { 'T-8' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 6 items' do
       args1 = {
         :order_id => order_id,
@@ -577,7 +614,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#auth_to_sales' do
     let(:call_method) { '#auth_to_sales' }
-    let(:order_id) { 'T-9' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 6 items' do
       amount = 1
       args1 = {
@@ -615,7 +652,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#change_tran' do
     let(:call_method) { '#change_tran' }
-    let(:order_id) { 'T-10' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 6 items' do
       amount_old = 1
       amount_new = 2
@@ -655,7 +692,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#search_trade' do
     let(:call_method) { '#search_trade' }
-    let(:order_id) { 'T-11' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 21 items' do
       args1 = {
         :order_id => order_id,
@@ -692,8 +729,8 @@ describe GmoPayment::Client, :vcr do
 
   describe '#save_traded_card' do
     let(:call_method) { '#save_traded_card' }
-    let(:order_id) { 'T-12' }
-    let(:member_id) { 'T-M11' }
+    let(:member_id) { is_cassette_available.call ? uuid.call(name: :member_id) : SecureRandom.uuid }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order, index: 1) : SecureRandom.hex(27/2) }
     it 'return 3 items' do
       args1 = {
         :member_id => member_id
@@ -723,14 +760,14 @@ describe GmoPayment::Client, :vcr do
       }
       response = client.save_traded_card(args4)
       expect(response.card_seq).to eq('0') | eq('1') | eq('2') | eq('3') | eq('4')
-      expect(response.card_no).to eq(card_no_n_mask)
+      expect(response.card_no).to eq(card_no_n_mask) # [FIXME] expect(response.card_no).to eq(card_no_n_mask.sub(/(\*)+(\d)+/) { $1 * (16 - 4) + $2 * 4 })
       expect(response.forward).to eq(res2.forward)
     end
   end
 
   describe '#entry_tran_btc' do
     let(:call_method) { '#entry_tran_btc' }
-    let(:order_id) { 'T-13' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 2 items' do
       args = {
         :order_id => order_id,
@@ -744,7 +781,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#exec_tran_btc' do
     let(:call_method) { '#exec_tran_btc' }
-    let(:order_id) { 'T-14' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 3 items' do
       args1 = {
         :order_id => order_id,
@@ -781,7 +818,7 @@ describe GmoPayment::Client, :vcr do
 
   describe '#search_trade_btc' do
     let(:call_method) { '#search_trade_btc' }
-    let(:order_id) { 'T-15' }
+    let(:order_id) { is_cassette_available.call ? uuid.call(name: :order_id) : SecureRandom.hex(27/2) }
     it 'return 11 items' do
       args1 = {
         :order_id => order_id,

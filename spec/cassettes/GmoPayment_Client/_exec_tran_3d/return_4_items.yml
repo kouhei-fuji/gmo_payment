@@ -5,16 +5,16 @@ http_interactions:
     uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-3&JobCd=AUTH&Amount=1&Tax=1&TdFlag=1&TdTenantName=REVWpcaluaXIpM7Fucre&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=c8b11193c1601d62d88081f230&JobCd=AUTH&Amount=1&Tax=1&TdFlag=1&TdTenantName=REVWpcaluaXIpM7Fucre&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '119'
+      - '142'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:20 GMT
+      - Mon, 28 May 2018 09:15:10 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -34,24 +34,24 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: AccessID=7d10e9316dab67e212a74b97359ff927&AccessPass=9f491c688df0c40b86265ffe0bef6b3f
+      string: AccessID=7e399c8e891f7f21a3488f66e4416946&AccessPass=fbe2eb072272c32e4a6f46af39f4cb82
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:21 GMT
+  recorded_at: Mon, 28 May 2018 09:15:10 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
     body:
       encoding: US-ASCII
-      string: AccessID=7d10e9316dab67e212a74b97359ff927&AccessPass=9f491c688df0c40b86265ffe0bef6b3f&OrderID=T-3&CardNo=<CARD_NO_Y>&Expire=<CARD_EXPIRE>&HttpAccept=*%2F*&HttpUserAgent=Rspec&Method=2&PayTimes=2&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran_3d&ClientFieldFlag=1&DeviceCategory=0
+      string: AccessID=7e399c8e891f7f21a3488f66e4416946&AccessPass=fbe2eb072272c32e4a6f46af39f4cb82&OrderID=c8b11193c1601d62d88081f230&CardNo=<CARD_NO_Y>&Expire=<CARD_EXPIRE>&HttpAccept=*%2F*&HttpUserAgent=Rspec&Method=2&PayTimes=2&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23exec_tran_3d&ClientFieldFlag=1&DeviceCategory=0
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '311'
+      - '334'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -62,7 +62,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:20 GMT
+      - Mon, 28 May 2018 09:15:11 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -71,7 +71,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: ACS=1&ACSUrl=<ACS_URL>&PaReq=eJxVUs1O20AQfhXLd7K/TuxoMsiQVuXgKC1p75v1JjHCdrCdJuEGSBVvwFv0Dq8TIfUxumtMaA+rnW9m9H2jbwZOd/m199NUdVYWI5/1qO+ZQpdpVixH/vfZ55PQP0WYrSpjxpdGbyqDkJi6VkvjZenIn6pv5oZJPmBRKDmVAZWsL6IglEFIGedRNAj7PsI0tn0InRJaoR4H8g4tZaVXqmgQlL45u5igZFzIAEgHITfVxRjbZH8QRrQrv6WhULnB8acfh4dfh/vnw8Pj4e7368vTn8cnIG0NdLkpmmqPVPSBvAPYVNe4apr1kJDtdttbrtU+N0VT93SZEyCuDORjtunGRbWl22UpJlfxbjKLb5Orr/tkFm+T8dub3MYjIK4DUtUY5JQFVHDpMT6kdMgpkDYPKndzoPWhi2DtBOJj+l8I1vvKrmaPIrKlIwKzW5eFHRot7zGG1NQaPavkfiAfk59/cR7rxtoWsUjJYL4QC7WYi3nAdJgKIULF+MI53zY5/sx6xaznrYADQBwN6ZZKuoOw0X+H8hfKhck+&MD=7d10e9316dab67e212a74b97359ff927
+      string: ACS=1&ACSUrl=<ACS_URL>&PaReq=eJxVUsFO4zAQ/ZUod2pPXBOnmhplN6y2h0IFLHfXcdsgkpQkpe3eFiTEH/AX3OF3qpX4DOwQyu7BmnlvRvNGb4xHm/zauzVVnZXF0Ice9T1T6DLNivnQ/3Xx40D4RxIvFpUxybnRq8pIHJu6VnPjZenQn6gzcwM8CPuRiAAoF5wKCFuGQRiFPKDMlziJbZ/ETklaoV6A5BPakZVeqKKRqPTNt9GJ7EPA+hxJBzE31SiRLXkYioh25Q8aC5UbmRxf7u4fdncvu/vH3Z/nv69Pb49PSNoa6nJVNNVWUnaI5BPgqrqWi6ZZDghZr9e9+VJtc1M0dU+XOUHiyki+dpusXFbbcZssleOreHOaxDC+mtt4DOMkXrfv92iIxHVgqhojAwqC8kB4NBoAHwAgaXlUudtDWh+6DJdOIN7T/0K03lf2NFvJIlvaIzSbZVnYpSVFss8xNbWWnlVyEcnX5t9/Oo91Y22LIFJ9Pp2xmZpN2ZSDFiljTCgIZs75tsnNz6xXYD1vBRxA4saQ7qik+xA2+++jvAM4hsjA&MD=7e399c8e891f7f21a3488f66e4416946
     http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:21 GMT
+  recorded_at: Mon, 28 May 2018 09:15:11 GMT
 recorded_with: VCR 2.9.3

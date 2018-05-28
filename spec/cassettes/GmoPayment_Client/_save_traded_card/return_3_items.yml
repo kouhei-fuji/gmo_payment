@@ -5,16 +5,16 @@ http_interactions:
     uri: https://<API_ENDPOINT>/payment/SaveMember.idPass
     body:
       encoding: US-ASCII
-      string: MemberID=T-M11&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
+      string: MemberID=1058da9b-f4a7-4a3b-95ac-4ad59d23841d&SiteID=<SITE_ID>&SitePass=<SITE_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '53'
+      - '84'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:03 GMT
+      - Mon, 28 May 2018 09:14:46 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -34,24 +34,24 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: MemberID=T-M11
-    http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:04 GMT
+      string: MemberID=1058da9b-f4a7-4a3b-95ac-4ad59d23841d
+    http_version:
+  recorded_at: Mon, 28 May 2018 09:14:46 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/EntryTran.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-12&JobCd=AUTH&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=220214060a0684224d53144688&JobCd=AUTH&Amount=1&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '71'
+      - '93'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -62,7 +62,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:03 GMT
+      - Mon, 28 May 2018 09:14:47 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -71,24 +71,24 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: AccessID=d3cd3697c73aab977970b3cb30247719&AccessPass=54af311d1a973f8c023227b63219cb72
-    http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:04 GMT
+      string: AccessID=884f7700272f4bf83cf76b2d8aaf1632&AccessPass=8afcb6f4a3fa11a97a790aadd0a54ea2
+    http_version:
+  recorded_at: Mon, 28 May 2018 09:14:47 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/ExecTran.idPass
     body:
       encoding: US-ASCII
-      string: AccessID=d3cd3697c73aab977970b3cb30247719&AccessPass=54af311d1a973f8c023227b63219cb72&OrderID=T-12&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23save_traded_card&ClientFieldFlag=1
+      string: AccessID=884f7700272f4bf83cf76b2d8aaf1632&AccessPass=8afcb6f4a3fa11a97a790aadd0a54ea2&OrderID=220214060a0684224d53144688&CardNo=<CARD_NO_N>&Expire=<CARD_EXPIRE>&Method=1&ClientField1=DEVTEST&ClientField2=%8AJ%94%AD%83e%83X%83g&ClientField3=%23save_traded_card&ClientFieldFlag=1
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '251'
+      - '273'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -99,7 +99,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:05 GMT
+      - Mon, 28 May 2018 09:14:49 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -109,29 +109,30 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        QUNTPTAmT3JkZXJJRD1ULTEyJkZvcndhcmQ9MmE5OTY2MiZNZXRob2Q9MSZQ
-        YXlUaW1lcz0mQXBwcm92ZT02NjExMjU3JlRyYW5JRD0xNTAzMjQyMTAwMTEx
-        MTExMTExMTExODcyMzY5JlRyYW5EYXRlPTIwMTUwMzI0MjEwMDA0JkNoZWNr
-        U3RyaW5nPTU3OGYzYzdhYzc4MWYzMDM4YTRjYzNiMGNkZDRhMzhjJkNsaWVu
-        dEZpZWxkMT1ERVZURVNUJkNsaWVudEZpZWxkMj2KSpStg2WDWINnJkNsaWVu
-        dEZpZWxkMz0jc2F2ZV90cmFkZWRfY2FyZA==
-    http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:05 GMT
+        QUNTPTAmT3JkZXJJRD0yMjAyMTQwNjBhMDY4NDIyNGQ1MzE0NDY4OCZGb3J3
+        YXJkPTJhOTk2NjImTWV0aG9kPTEmUGF5VGltZXM9JkFwcHJvdmU9NDU2MzI1
+        NiZUcmFuSUQ9MTgwNTI4MTgxNDExMTExMTExMTExMTg3MDg5OSZUcmFuRGF0
+        ZT0yMDE4MDUyODE4MTQ0OCZDaGVja1N0cmluZz1jMzJlY2Y1MmVjYjQwZmZk
+        MDU0ZjdmYTA3OTdmZDAzYSZDbGllbnRGaWVsZDE9REVWVEVTVCZDbGllbnRG
+        aWVsZDI9ikqUrYNlg1iDZyZDbGllbnRGaWVsZDM9I3NhdmVfdHJhZGVkX2Nh
+        cmQ=
+    http_version:
+  recorded_at: Mon, 28 May 2018 09:14:49 GMT
 - request:
     method: post
     uri: https://<API_ENDPOINT>/payment/TradedCard.idPass
     body:
       encoding: US-ASCII
-      string: OrderID=T-12&MemberID=T-M11&SiteID=<SITE_ID>&SitePass=<SITE_PASS>&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
+      string: OrderID=220214060a0684224d53144688&MemberID=1058da9b-f4a7-4a3b-95ac-4ad59d23841d&SiteID=<SITE_ID>&SitePass=<SITE_PASS>&ShopID=<SHOP_ID>&ShopPass=<SHOP_PASS>
     headers:
       Accept:
       - application/x-www-form-urlencoded;q=1.0,*/*;q=0.5
       User-Agent:
-      - RubyGem/GmoPayment/0.0.1
+      - RubyGem/GmoPayment/0.0.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Content-Length:
-      - '105'
+      - '158'
       Content-Type:
       - application/x-www-form-urlencoded
   response:
@@ -142,7 +143,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 24 Mar 2015 12:00:05 GMT
+      - Mon, 28 May 2018 09:14:49 GMT
       Content-Type:
       - text/plain;charset=Windows-31J
       Transfer-Encoding:
@@ -151,7 +152,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: CardSeq=0&CardNo=<CARD_NO_N_MASK>&Forward=2a99662
-    http_version: 
-  recorded_at: Tue, 24 Mar 2015 12:00:05 GMT
+      string: CardSeq=0&CardNo=<CARD_NO_N_MASK>&Forward=2a99662 # [FIXME]
+    http_version:
+  recorded_at: Mon, 28 May 2018 09:14:49 GMT
 recorded_with: VCR 2.9.3
